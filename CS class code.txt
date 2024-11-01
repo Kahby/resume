@@ -1,0 +1,89 @@
+import math
+def prime(n):
+  i=2
+  while(i<n):
+    if(n%math.sqrt(i)==0):
+      print("it is not prime")
+      return
+    else:
+      print("it is prime")
+      return
+
+def fact(n):
+  if (n==0) or (n==1):
+    return 1
+  return n*fact(n-1)
+def pal(n):
+    str_num = str(n)
+    left = 0
+    right = len(str_num) - 1
+    
+    while left < right:
+        if str_num[left] != str_num[right]:
+            return False
+        left += 1
+        right -= 1
+    
+    return True
+def fib(n):
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+
+
+
+
+
+import module1 as m1
+print("Enetr a choice ")
+print("1.Prime number")
+print("2.factorial")
+print("3.Fibonacci")
+print("4.Armstrong")
+print("5.palindrome")
+print("6.Exit")
+a=int(input("Choice"))
+if(a==1):
+  n=int(input("enter a number to check for prime"))
+  m1.prime(n)
+if(a==2):
+  n=int(input("enter a number to check for factorial"))
+  print(m1.fact(n))
+if(a==3):
+  n=int(input("enter a number to check for fibonacci"))
+  m1.fib(n)
+if(a==4):
+  m1.arms()
+if(a==5):
+  n=int(input("enter a number to check for palindrome"))
+  m1.pal(n)
+else:
+  print("Closed")
+
+
+
+
+module2:
+
+
+
+
+
+
+
+          
+        
+
+
+module1:
+
+
+
+
+
+
+
+  
+
